@@ -30,8 +30,14 @@ class ViewController: UIViewController {
         let firstName = firstOL.text!;
         let lastOL = lastOL.text!;
         let ageOL = ageOL.text!;
+        var str = ""
+        if firstName == "" || lastOL == "" || ageOL == "" {
+            str = "Some fields are empty"
+        }else{
+            str = "Hello my name is \(firstName) \(lastOL) and my age is \(ageOL)"
+        }
         
-        var str = "Hello my name is \(firstName) \(lastOL) and my age is \(ageOL)"
+
         
         outputOL.text = str
     }
