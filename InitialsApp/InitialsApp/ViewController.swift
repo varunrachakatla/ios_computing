@@ -24,8 +24,12 @@ class ViewController: UIViewController {
     @IBAction func getInitials(_ sender: Any) {
         var firstName = firstNameOL.text!
         var lastName = lastNameOL.text!
-        
-        var labelText = "Your Initials: \(firstName[firstName.startIndex]).\(lastName[lastName.startIndex])."
+        var splitFirstName = firstName.split(separator: " ");
+        var newString = ""
+        for index in 2 {
+            
+        }
+        var labelText = "Your Initials: \(newString).\(lastName[lastName.startIndex])."
         
         outputOL.text = labelText
     }
