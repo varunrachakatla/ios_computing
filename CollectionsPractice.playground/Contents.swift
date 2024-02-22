@@ -16,33 +16,6 @@ for (key,values) in numbers{
     print(values)
 }
 
-public struct Stack<ElementType> {
-    private var storage:[ElementType] = [];
-    
-    public init(_ arr: [ElementType]?){
-        if arr != nil {
-            storage = arr!;
-        }
-        
-    }
-    
-    public mutating func push(_ element: ElementType){
-        storage.append(element);
-    }
-    
-    public mutating func pop()-> ElementType?{
-        return storage.popLast();
-    }
-    
-    public func peek()->ElementType?{
-        return storage.last
-    }
-    
-    public func toString(){
-        print(storage)
-    }
-    
-}
 var players : Set<String> = ["David Warner", "Virat Kohli",
 "Kane Williamson", "Steve Smith"]
 
@@ -71,6 +44,44 @@ arr.append(6);arr.append(10);arr.append(16);arr.append(30);
 
 arr.popLast();
 
+public struct Stack<ElementType> {
+    private var storage:[ElementType] = [];
+    
+    public init(_ arr: [ElementType]?){
+        if arr != nil {
+            storage = arr!;
+        }
+        
+    }
+    
+    public mutating func push(_ element: ElementType){
+        storage.append(element);
+    }
+    
+    public mutating func pop()-> ElementType?{
+        return storage.popLast();
+    }
+    
+    public func peek()->ElementType?{
+        return storage.last
+    }
+    
+    public func toString(){
+        print(storage)
+    }
+    
+}
+
+
+public class Node<T> {
+    public var data: T
+    public var next: Node<T>?
+    
+    public init(data: T) {
+        self.data = data
+        self.next = nil
+    }
+}
 var stk: Stack = Stack<Int>([])
 
 stk.push(2);
