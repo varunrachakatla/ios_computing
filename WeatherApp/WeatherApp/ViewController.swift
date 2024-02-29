@@ -26,11 +26,19 @@ class ViewController: UIViewController {
         
         if(temp > 60){
             outputOL.text = "The Temperature is \(temp), It's Hot."
-            imageOL.image = UIImage(named:"hot-weather.jpeg")
+            UIView.animate(withDuration: 1, delay: 0.5, animations: {
+                self.imageOL.alpha = 0
+                self.imageOL.alpha = 1;
+                self.imageOL.image = UIImage.hotWeather
+            })
         }
         else if(temp<=60){
             outputOL.text = "The Temperature is \(temp), It's cold."
-            imageOL.image = UIImage(named:"cold-weather.jpeg")
+            UIView.animate(withDuration: 1, delay: 0.5, animations: {
+                self.imageOL.alpha = 0
+                self.imageOL.alpha = 1;
+                self.imageOL.image = UIImage.coldWeather
+            })
         }
     }
     
